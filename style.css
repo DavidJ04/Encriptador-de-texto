@@ -1,0 +1,138 @@
+body{
+    background: linear-gradient(beige, lightseagreen);
+}
+
+main{
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(11, auto);
+    grid-gap: 20px;
+    
+    justify-items:center;
+    background: linear-gradient(beige, lightseagreen);
+
+    grid-template-areas: 
+    "title-body   title-body   title-body"
+    "midel-body   midel-body   midel-body"
+    "button-body  button-body  button-body"
+    "final-body   final-body   final-body"
+    "final-button final-button final-button";
+}
+
+main .title-body{
+    margin-top: 50px;
+    grid-area: title-body;
+    
+}
+
+main .title-body img{
+margin-left: 1%;
+margin-right: 1%;
+size: 5%;
+height: 80px;
+}
+
+main .button-body{
+    grid-area: button-body;
+    margin-top: 10px;
+}
+
+main .midel-body{
+    grid-area: midel-body;
+}
+
+main .final-body{
+    grid-area: final-body;
+    
+}
+
+main .final-button{
+    grid-area: final-button;
+}
+
+.btn-styles{
+    background: beige;
+    height: 50px;
+    width: 110px;
+    margin: 10px 10px 10px 10px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    color: rgb(17, 114, 82);
+    box-shadow: 7px 5px gray;
+   
+}
+
+main .btn-styles:active{
+    background: darkcyan;
+    color: greenyellow;
+    transition: none;
+}
+
+.btn-styles:hover{
+    background: rgb(170, 226, 189);
+    transition: 700ms;
+    cursor: pointer;
+}
+
+.img{
+    width: 20%;
+}
+
+.text-main{
+    height: 473px;
+    width: 392px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+}
+
+.text-main::placeholder{
+   
+    font-size: 12.5px;
+    background-image: url(./imgs/escribir.jpg);
+    background-repeat: no-repeat;
+    background-size: 10% 5fr;
+    background-position: center top;
+    
+}
+
+#textoColocado{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    margin-bottom: 10px;
+    width: 411px;
+    height: 145px;
+}
+
+/*Transición de colores*/
+.titulo{
+    margin-top: 10px;
+    background: scroll white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:lightseagreen;
+    animation-name: example;
+    animation-duration: 5s;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes example {
+  0%  {color: lightseagreen;}
+  30% {color: rgb(98, 224, 98);}
+  60% {color: cornflowerblue;}
+  100% {color: lightseagreen; }
+}
+
+
+/*Responsive:*/
+@media screen and (max-width: 768px){
+	.main {
+		grid-template-areas: 
+        "title-body   title-body   title-body"
+        "midel-body   midel-body   midel-body"
+        "button-body  button-body  button-body"
+        "final-body   final-body   final-body"
+        "final-button final-button final-button";
+	}
+}
